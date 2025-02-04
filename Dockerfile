@@ -43,7 +43,6 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repos
     wget -q -O - "https://prdownloads.sourceforge.net/webadmin/webmin-${WEBMIN_VERSION}.tar.gz" | tar xz && \
     ln -sf /opt/webmin-${WEBMIN_VERSION} /opt/webmin && \
     /usr/bin/expect /webmin.exp && rm /webmin.exp && \
-    wget -q https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | zsh || true && \
 # Clean packages cache
     rm -rf /var/cache/apk/*
 
